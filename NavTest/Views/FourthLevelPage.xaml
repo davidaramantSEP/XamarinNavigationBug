@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="NavTest.Views.FourthLevelPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label>Level 4</Label>
+            <Button Clicked="Button_Clicked" Text="Go Back" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

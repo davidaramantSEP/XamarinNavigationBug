@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="NavTest.Views.ThirdLevelPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="Self">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Three pages deep. Query Param below:" />
+            <Label Text="{Binding Param, Source={Reference Self}}" />
+            <Button Clicked="Button_Clicked" Text="Go to Parent" />
+            <Button Clicked="GoDeeper_Clicked" Text="Go Deeper" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

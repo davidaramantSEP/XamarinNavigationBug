@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using NavTest.Models;
 using Xamarin.Forms;
+using NavTest.Views;
 
 namespace NavTest.ViewModels
 {
@@ -37,6 +38,23 @@ namespace NavTest.ViewModels
                 itemId = value;
                 LoadItemId(value);
             }
+        }
+
+        public Command GoDeeperCommand { get; }
+
+        public ItemDetailViewModel()
+        {
+            GoDeeperCommand = new Command(OnGoDeeper);
+        }
+
+        private void OnGoDeeper()
+        {
+            GoDeeper();
+        }
+
+        public async void GoDeeper()
+        {
+            await Shell.Current.GoToAsync($"{nameof(ThirdLevelPage)}?Param=GoingForward");
         }
 
         public async void LoadItemId(string itemId)

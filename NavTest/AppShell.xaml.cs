@@ -13,6 +13,8 @@ namespace NavTest
             InitializeComponent();
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute(nameof(ThirdLevelPage), typeof(ThirdLevelPage));
+            Routing.RegisterRoute(nameof(FourthLevelPage), typeof(FourthLevelPage));
         }
 
     }
